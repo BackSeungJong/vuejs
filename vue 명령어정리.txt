@@ -1,0 +1,26 @@
+npm init					: package.json 생성
+
+npm install vue				: vue 다운
+npm install webpack webpack-cli -D[--save-dev]	: webpack, webpack-cli 다운
+[webpack.config.js 생성 => entry, module, plugins, output 설정]
+npm install vue-loader -D			: vue-loader 다운
+npm install vue-template-compiler -D		: vue-template-compiler 다운
+npm install vue-style-loader -D		:
+npm install css-loader -D			: 
+npm install -D webpack-dev-server		: 브라우저 자동 새로고침
++ package.json{"scripts":{"dev":"webpack-dev-server --hot}} 	추가
++ webpack.config.js{ devServer: {
+        devMiddleware: { publicPath: '/dist' },
+        static: { directory: path.resolve(__dirname) },
+        hot: true
+    }}  						추가
+
+*vue 랑 vue-template-compiler 의 버전을 맞춰줘야함!
+npm install vue@2.6.14
+npm install vue-template-compiler@2.6.14
+
+*git에 올릴 때 node-module이랑 dist는 올리지않는다.
+실행할 때 => npm install 를 통해서 필요한 모듈을 알아서 다운받는다
+
+*vue devtools
+크롬웹스토어
